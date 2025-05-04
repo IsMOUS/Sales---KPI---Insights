@@ -72,14 +72,6 @@ Key metrics and visuals include:
 
 ---
 
-## 📁 Files in This Repository
-
-- `National-Clothing-Chain-Report.pdf` — Full analysis report
-- `National-Clothing-Chain-Summary.doc` — Executive summary
-- `National-Clothing-Chain-Data-Model.png` — Data model diagram
-- `/img/` — All related visualizations (correlations, income maps, product stats)
-
----
 
 ## 🧠 Final Thought
 
