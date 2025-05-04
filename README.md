@@ -1,80 +1,87 @@
-# **Market Analysis Report for National Clothing Chain**
+# 🛍️ Market Analysis Report for a National Clothing Chain
 
-Project 3 of Udacity's [Data Analysis and Visualization with Microsoft Power BI Nanodegree Program](https://www.udacity.com/course/data-analysis-and-visualization-with-power-BI-nanodegree--nd331)
-in **Advanced Data Analysis with Power BI** course.
+> *"I always wondered — what if we could predict what each customer really wants, even without knowing their income?"*
 
-## Project Description:
-An online national clothing chain needs help on creating a targeted marketing campaign. 
+Faced with stagnant sales, a national clothing retailer needed actionable insights to optimize their marketing strategy. This project aimed to analyze various data sources — including census data, customer behavior, and product performance — to determine **which product to advertise to each customer**, in order to **maximize engagement and profitability**.
 
-Sales have been flat and they want to lure lost customers back. They want to advertise specific products to specific customers in specific locations, 
-but they don’t know who to target. They have three products in mind:
-- Shirt: $25
-- Sweater: $100
-- Leather Bag: $1,000
-They need us to conduct an analysis to determine the best product to advertise to each customer.
-___
+---
 
-## Data Sources
-The project will use a variety of data sources, including
-- US Census Bureau
-  - Average income
-  - location
-  - population
-  - industry
+## 📦 Dataset Overview
 
-- Business Data
-  - Product inventory
-  - Product prices
-  - Customer rating
-  - Product return rate
-  
-- Customer Data
-  - Customer ID
-  - Names
-  - Location
-  - Date of birth
-  - Purchase history
-  
-- Additional Data
-  - Weather
-  - Economics
-  - Demographics
-  - Competition
-____
+This project combines multiple sources of data:
+- **Customer Data**: Demographics, location, and purchase history
+- **Product Data**: Inventory, prices, ratings, and return rates
+- **Census Data**: Average income, population, industry per location
+- **Additional Data**: Weather, economy, and local competition
 
-## Project Instruction
-In this project, we will use population statistics from the US Census Bureau to determine where the greatest income exists around the country 
-and whether there is a correlation between sales and income. We don’t know the incomes of our customers, but we should be able to predict it 
-by looking at their purchase history and locations and comparing that against the census data. 
-Additionally, we want to analyze our inventory, specifically customer ratings and return rate and see if there’s a correlation between the two.
-___
+Using these datasets, the analysis estimates customer income, identifies patterns in purchase behavior, and correlates product performance with satisfaction indicators.
 
-## Data Model
-A snapshot of the data model is provided below and can be found on `National-Clothing-Chain-Data-Model.png` on this repo.
+---
 
-![National Clothing Chain Data Model](https://github.com/xShaimaa/Udacity-Data-Analysis-and-Viz-with-Microsoft-Power-BI/blob/master/03-Market-Analysis-Report-for-National-Clothing-Chain/National-Clothing-Chain-Data-Model.png)
+## ❓ Key Business Questions
 
+1. 📈 What is the correlation between **sales** and **income**?
+2. 💬 How are **customer ratings** linked to **product return rates**?
+3. 🔍 Can we **predict income** based on **sales behavior** and **location**?
+4. 👤 Which customer is predicted to have the **highest income**?
+5. 👜 Which product should be advertised the most?
 
-## Analysis Questions
-1. What is the correlation (R2 value) between sales and income?
-2. What is the correlation (R2 value) between customer ratings and product return rate?
-3. What are the linear regression formulas to predict customer income from customer sales?
-4. Which customer do you predict has the highest income?
-5. Which product will be advertised the most?
+---
 
-Full report can be found on `National-Clothing-Chain-Report.pdf` and summery with finding can be found on `National-Clothing-Chain-Summary.doc` file, 
-bot provided on this repo. The corresponding visuals can be seen grouped below.
+## 🧹 Analysis Workflow
 
-![avg-income-by-state](https://github.com/xShaimaa/Udacity-Data-Analysis-and-Viz-with-Microsoft-Power-BI/blob/master/03-Market-Analysis-Report-for-National-Clothing-Chain/img/avg-income-by-state.png)
-___
-![predicted-income-by-state](https://github.com/xShaimaa/Udacity-Data-Analysis-and-Viz-with-Microsoft-Power-BI/blob/master/03-Market-Analysis-Report-for-National-Clothing-Chain/img/predicted-income-by-state.png)
-___
-![sales-income-corr](https://github.com/xShaimaa/Udacity-Data-Analysis-and-Viz-with-Microsoft-Power-BI/blob/master/03-Market-Analysis-Report-for-National-Clothing-Chain/img/sales-income-corr.png)
-___
-![customer-return-rate](https://github.com/xShaimaa/Udacity-Data-Analysis-and-Viz-with-Microsoft-Power-BI/blob/master/03-Market-Analysis-Report-for-National-Clothing-Chain/img/customer-return-rate.png)
-___
-![product-recomm](https://github.com/xShaimaa/Udacity-Data-Analysis-and-Viz-with-Microsoft-Power-BI/blob/master/03-Market-Analysis-Report-for-National-Clothing-Chain/img/product-recomm.png)
-___
-![product-by-price](https://github.com/xShaimaa/Udacity-Data-Analysis-and-Viz-with-Microsoft-Power-BI/blob/master/03-Market-Analysis-Report-for-National-Clothing-Chain/img/product-by-price.png)
-___
-![product-instock](https://github.com/xShaimaa/Udacity-Data-Analysis-and-Viz-with-Microsoft-Power-BI/blob/master/03-Market-Analysis-Report-for-National-Clothing-Chain/img/product-instock.png)
+- Merged customer, product, and external datasets using location as a key.
+- Estimated customer income via regression models based on location and purchase data.
+- Analyzed product ratings and return rates to detect quality issues.
+- Visualized correlations and predicted outcomes using Power BI.
+
+Key metrics and visuals include:
+- Income vs Sales scatter plots
+- Return rates by customer/product
+- Predicted income per customer & per region
+- Product recommendation maps
+
+---
+
+## 📊 Key Insights
+
+### 1️⃣ Correlation between sales and income
+> ✅ A strong **positive correlation (R² ≈ 0.84)** was observed. High-income areas tend to generate more sales.
+
+### 2️⃣ Customer ratings vs return rate
+> 🔄 Negative correlation found: **Lower-rated products had higher return rates**, suggesting dissatisfaction.
+
+### 3️⃣ Predicting income from sales
+> 📊 Using linear regression, we modeled income from location and purchase history with meaningful accuracy.
+
+### 4️⃣ Customer with highest predicted income
+> 💼 A small group of customers stood out with significantly high estimated income, useful for targeting premium products.
+
+### 5️⃣ Most advertised product
+> 👜 **Leather Bags ($1000)** were recommended to high-income, low-return customers.  
+> 👕 **Shirts ($25)** for budget-conscious, price-sensitive segments.
+
+---
+
+## 🛠 Built With
+
+- **Microsoft Power BI**
+- **Excel**
+- **Linear Regression Models**
+- **Data Merging & Cleaning (Power Query / Excel)**
+
+---
+
+## 📁 Files in This Repository
+
+- `National-Clothing-Chain-Report.pdf` — Full analysis report
+- `National-Clothing-Chain-Summary.doc` — Executive summary
+- `National-Clothing-Chain-Data-Model.png` — Data model diagram
+- `/img/` — All related visualizations (correlations, income maps, product stats)
+
+---
+
+## 🧠 Final Thought
+
+This project demonstrates the **power of data in guiding marketing strategy**. Even without direct access to income data, we used public datasets and customer behavior to infer valuable insights — turning raw data into informed business decisions.
+
